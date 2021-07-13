@@ -1,0 +1,61 @@
+==================================================
+ Consulta: Crear 3 nuevos usuarios
+==================================================
+usuarios.objects.create(first_name="Oscar", last_name="Luna", email_address="oscar.luna@hcjb.com", age="28") 
+usuarios.objects.create(first_name="Juan", last_name="Chavez", email_address="juan.chavez@hcjb.com", age="38") 
+usuarios.objects.create(first_name="Pedro", last_name="Narvaez", email_address="pedro.narvaez@hcjb.com", age="29") 
+==================================================
+ Consulta: recuperar todos los usuarios
+==================================================
+usuarios.objects.all().values()
+==================================================
+ Consulta: recuperar el último usuario
+==================================================
+usuarios.objects.last() 
+==================================================
+ Consulta: recuperar el primer usuario
+==================================================
+usuarios.objects.first() 
+==================================================
+ Consulta: Cambie el usuario con id = 3 para que su apellido sea Pancakes.
+==================================================
+usuario_3 = usuarios.objects.get(id=3) 
+usuario_3.last_name = 'Pancakes'            
+usuario_3.save() 
+================================================== 
+ Consulta: Eliminar el usuario con id = 2 de la base de datos
+==================================================
+usuario_2 = usuarios.objects.get(id=2) 
+usuario_2.delete() 
+==================================================
+ Consulta: Obtenga todos los usuarios, ordenados por su nombre
+==================================================
+usuarios.objects.all().order_by("first_name")  
+==================================================
+ BONUS Query: obtén todos los usuarios, ordenados por su nombre en orden descendente
+==================================================
+usuarios.objects.all().order_by("-first_name")  
+
+
+
+
+==================================================
+GITHUB
+==================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
