@@ -1,0 +1,81 @@
+============================================================
+ Consulta: Crea 3 nuevos dojos
+============================================================
+Dojo.objects.create(name='Yakuza', city='New York', state='New York')              
+Dojo.objects.create(name='LuKai', city='Arizona', state='Arizona')    
+Dojo.objects.create(name='YamaguchiKai', city='Los Angeles', state='California')
+
+============================================================
+ Consulta: elimina los 3 dojos que acaba de crear
+============================================================
+d1 = Dojo.objects.get(id=1)             
+d1.delete()
+d2 = Dojo.objects.get(id=2)
+d2.delete()
+d3 = Dojo.objects.get(id=3)
+d3.delete()
+
+============================================================
+ Consulta: Crea 3 dojos más
+============================================================
+Dojo.objects.create(name='KaiLu', city='Dover', state='Delawer')    
+Dojo.objects.create(name='KaiYamaguchi', city='Atlanta', state='Georgia')
+Dojo.objects.create(name='Yakuzi', city='Denver', state='Colorado')  
+
+============================================================
+ Consulta: crea 3 ninjas que pertenecen al primer dojo
+============================================================
+from ojo_ninjas_app.models import Dojo, Ninja
+n1 = Ninja.objects.create(dojo=Dojo.objects.get(id=5), first_name='Alexis', last_name='Gf')
+n2 = Ninja.objects.create(dojo=Dojo.objects.get(id=5), first_name='Juan', last_name='Flores')
+n3 = Ninja.objects.create(dojo=Dojo.objects.get(id=5), first_name='Pedro', last_name='Coco')
+
+============================================================
+ Consulta: crea 3 ninjas que pertenecen al segundo dojo
+============================================================
+n4 = Ninja.objects.create(dojo=Dojo.objects.get(id=6), first_name='Pepe', last_name='Lepeu')
+n5 = Ninja.objects.create(dojo=Dojo.objects.get(id=6), first_name='Silvestre', last_name='Francis')
+n6 = Ninja.objects.create(dojo=Dojo.objects.get(id=6), first_name='Jhon', last_name='Dian')
+
+============================================================
+ Consulta: crea 3 ninjas que pertenecen al tercer dojo
+============================================================
+n7 = Ninja.objects.create(dojo=Dojo.objects.get(id=8), first_name='Dawne', last_name='Trujillo')
+n8 = Ninja.objects.create(dojo=Dojo.objects.get(id=8), first_name='Frank', last_name='Fortunato')
+n9 = Ninja.objects.create(dojo=Dojo.objects.get(id=8), first_name='Raiza', last_name='McGill')
+
+============================================================
+ Consulta: recupera todos los ninjas del primer dojo
+============================================================
+ninjas1 = Ninja.objects.filter(dojo=Dojo.objects.get(id=5))
+
+============================================================
+ Consulta: recupera todos los ninjas del último dojo
+============================================================
+ninjas2 = Ninja.objects.filter(dojo=Dojo.objects.get(id=8))
+
+============================================================
+ Consulta: recupera el último dojo del ninja
+============================================================
+Dojo.objects.last() 
+
+============================================================
+ Agrega un nuevo campo de texto llamado "desc" a su clase de Dojo
+============================================================
+Listo
+============================================================
+ Crea y ejecuta los archivos de migración para actualizar la tabla en su base de datos. Si es necesario, proporcione un valor predeterminado de "dojo antiguo"
+============================================================ 
+Listo
+============================================================
+ Consulta: crear un nuevo dojo
+============================================================
+Dojo.objects.create(name='Lions', city='Quito', state='Pichincha')  
+
+
+
+
+============================================================
+GITHUB
+============================================================
+https://github.com/AlexisGfly/python_stack/tree/master/django/django_orm/dojo_ninjas_proj
