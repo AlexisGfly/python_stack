@@ -116,3 +116,4 @@ el_libro.authors.all()
 ===========================================================
 GITHUB
 ===========================================================
+https://github.com/AlexisGfly/python_stack/tree/master/django/django_orm/book_authors_proj
